@@ -94,3 +94,6 @@
 [submodule "packstack/puppet/modules/gluster"]
 	path = packstack/puppet/modules/gluster
 	url = https://github.com/redhat-openstack/puppet-openstack-storage.git
+[submodule "packstack/puppet/modules/rabbitmq"]
+	path = packstack/puppet/modules/rabbitmq
+	url = https://github.com/puppetlabs/puppetlabs-rabbitmq.git
