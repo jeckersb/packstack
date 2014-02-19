@@ -68,6 +68,19 @@ def initConfig(controllerObject):
          "USE_DEFAULT"     : True,
          "NEED_CONFIRM"    : True,
          "CONDITION"       : False},
+
+        {"CMD_OPTION"      : "ceilometer-rpc-backend",
+         "USAGE"           : "Ceilometer RPC backend",
+         "PROMPT"          : "Enter the Ceilometer RPC backend",
+         "OPTION_LIST"     : [r'^ceilometer\.openstack\.common\.rpc\.impl_\w+$'],
+         "VALIDATORS"      : [validators.validate_regexp],
+         "DEFAULT_VALUE"   : "ceilometer.openstack.common.rpc.impl_qpid",
+         "MASK_INPUT"      : False,
+         "LOOSE_VALIDATION": True,
+         "CONF_NAME"       : "CONFIG_CEILOMETER_RPC_BACKEND",
+         "USE_DEFAULT"     : False,
+         "NEED_CONFIRM"    : False,
+         "CONDITION"       : False },
     ]
 
     groupDict = {"GROUP_NAME"          : "CEILOMETER",

@@ -4,7 +4,7 @@ class { 'ceilometer':
     qpid_hostname   => '%(CONFIG_QPID_HOST)s',
     qpid_username  => '%(CONFIG_QPID_AUTH_USER)s',
     qpid_password  => '%(CONFIG_QPID_AUTH_PASSWORD)s',
-    rpc_backend     => 'ceilometer.openstack.common.rpc.impl_qpid',
+    rpc_backend     => '%(CONFIG_CEILOMETER_RPC_BACKEND)s',
     verbose         => true,
     debug           => %(CONFIG_DEBUG_MODE)s
 }

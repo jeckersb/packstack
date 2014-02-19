@@ -84,6 +84,18 @@ def initConfig(controllerObject):
                    "USE_DEFAULT"     : False,
                    "NEED_CONFIRM"    : False,
                    "CONDITION"       : False },
+                  {"CMD_OPTION"      : "cinder-rpc-backend",
+                   "USAGE"           : "Cinder RPC backend",
+                   "PROMPT"          : "Enter the Cinder RPC backend",
+                   "OPTION_LIST"     : [r'^cinder\.openstack\.common\.rpc\.impl_\w+$'],
+                   "VALIDATORS"      : [validators.validate_regexp],
+                   "DEFAULT_VALUE"   : "cinder.openstack.common.rpc.impl_qpid",
+                   "MASK_INPUT"      : False,
+                   "LOOSE_VALIDATION": True,
+                   "CONF_NAME"       : "CONFIG_CINDER_RPC_BACKEND",
+                   "USE_DEFAULT"     : False,
+                   "NEED_CONFIRM"    : False,
+                   "CONDITION"       : False },
                  ]
 
     groupDict = { "GROUP_NAME"            : "CINDER",

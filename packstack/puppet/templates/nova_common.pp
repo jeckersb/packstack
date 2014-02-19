@@ -13,7 +13,7 @@ class { "nova":
     qpid_hostname      => "%(CONFIG_QPID_HOST)s",
     qpid_username      => '%(CONFIG_QPID_AUTH_USER)s',
     qpid_password      => '%(CONFIG_QPID_AUTH_PASSWORD)s',
-    rpc_backend        => 'nova.openstack.common.rpc.impl_qpid',
+    rpc_backend        => '%(CONFIG_NOVA_RPC_BACKEND)s',
     qpid_port          => '%(CONFIG_QPID_CLIENTS_PORT)s',
     qpid_protocol      => '%(CONFIG_QPID_PROTOCOL)s',
     verbose            => true,
